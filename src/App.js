@@ -43,7 +43,7 @@ function App() {
             extractedData = data;
           }
           if (forecastType === "forecast") {
-            extractedData = data.list[0]; // INSTEAD OF EXTRACTING ONLY 1ST VALUE, YOU CAN CHANGE THIS AND LIST 3-HOURS FORECAST
+            extractedData = data.list[0];
           }
 
           setWeatherData(extractedData);
@@ -91,14 +91,6 @@ function App() {
           <option value="forecast">5-Day/3-Hour Forecast</option>
         </select>
       </div>
-
-      {/* <button
-        className="btn-style"
-        onClick={downloadForecast}
-        disabled={!weatherData}
-      >
-        Download Forecast
-      </button> */}
 
       {weatherData && (
         <div className="weather-data">
